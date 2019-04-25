@@ -4,13 +4,20 @@
   "description": "In this challenge, you will **deploy** an API of your choosing to `heroku`.",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JuruSteve/webapi-iv-challenge.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "express",
+    "blog",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,7 +25,12 @@
   },
   "homepage": "https://github.com/JuruSteve/webapi-iv-challenge#readme",
   "dependencies": {
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "helmet": "^3.16.0"
+    "helmet": "^3.16.0",
+    "knex": "^0.16.5",
+    "knex-cleaner": "^1.1.4",
+    "nodemon": "^1.18.11",
+    "sqlite3": "^4.0.6"
   }
 }

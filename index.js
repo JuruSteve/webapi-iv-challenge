@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config('.env')
 const express = require('express')
 const helmet = require('helmet')
 const postsRouter = require('./routes/postsRouter')
@@ -8,7 +9,7 @@ server.use(helmet())
 
 server.get('/', (req, res) => {
   res.send(`
-    <h1>Welcome To Lambda Blog API</h1>
+    <h1>${process.env.WELCOME} To JS Blog API</h1>
     `)
 })
 server.use('/api/posts', postsRouter)
