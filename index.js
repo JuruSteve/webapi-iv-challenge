@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config('.env')
+require('dotenv').config('.env')
 const express = require('express')
 const helmet = require('helmet')
 const postsRouter = require('./routes/postsRouter')
@@ -15,6 +15,6 @@ server.get('/', (req, res) => {
 server.use('/api/posts', postsRouter)
 server.use('/api/users', usersRouter)
 
-server.listen(4003, () => {
+server.listen(process.env.PORT || 4003, () => {
   console.log('Api Ready')
 })
