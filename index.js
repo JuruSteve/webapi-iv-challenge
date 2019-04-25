@@ -1,4 +1,4 @@
-require('dotenv').config('.env')
+const dotenv = require('dotenv').config('.env')
 const express = require('express')
 const helmet = require('helmet')
 const postsRouter = require('./routes/postsRouter')
