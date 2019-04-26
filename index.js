@@ -9,7 +9,7 @@ server.use(helmet())
 
 server.get('/', (req, res) => {
   res.send(`
-    <h1>${process.env.WELCOME} To JS Blog API</h1>
+    <h1>Welcome To JS Blog API</h1>
     `)
 })
 server.use('/api/posts', postsRouter)
